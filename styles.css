@@ -11,6 +11,14 @@ h1 {
     color: #333;
 }
 
+#userId {
+    width: 20%;
+    padding: 2em;
+    margin-bottom: 2em;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
 input[type="text"] {
     width: 20%;
     padding: 2em;
