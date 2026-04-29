@@ -7,55 +7,21 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Bienvenidos al Gestor de Tareas</h1>
-    <p>Esta aplicación te ayudará a organizar tus tareas diarias de manera eficiente.</p>
-    <button onclick="window.location.href='/tasks'">Ver Tareas</button>
+    <h1>Gestor de Tareas</h1>
 
-    <h2>Agregar Tarea</h2>
-    <form action="/tasks" method="POST">
-        <label for="title">Título:</label>
-        <input type="text" id="title" name="title" required>
-        <br>
-        <label for="description">Descripción:</label>
-        <textarea id="description" name="description" required></textarea>
-        <br>
-        <button type="submit">Agregar Tarea</button>
-    </form>
+    <div class="contenedor">
+    <input type="text" id="inputTarea" placeholder="Escribe una tarea" required>
+    <button id="btnGuardar">Guardar</button>
+        <div class="botones">
+        <button id="btnActualizar">Actualizar</button>
 
-    <h2>Buscar Tarea</h2>
-    <form action="/tasks/search" method="GET">
-        <label for="query">Buscar por Título:</label>
-        <input type="text" id="query" name="query" required>
-        <br>
-        <button type="submit">Buscar</button>
-    </form>
+        <button id="btnEliminar">Eliminnar</button>
+        </div>
+    </div>
 
-    <h2>Listar Tareas</h2>
-    <form action="/tasks" method="GET">
-        <button type="submit">Listar Todas las Tareas</button>
-    </form>
+    <h2>Lista de Tareas</h2>
+    <ul id="listaTareas"></ul>
 
-    
-    <h2>Actualizar Tarea</h2>
-    <form action="/tasks/update" method="POST">
-        <label for="taskId">ID de la Tarea:</label>
-        <input type="text" id="taskId" name="taskId" required>
-        <br>
-        <label for="title">Nuevo Título:</label>
-        <input type="text" id="title" name="title" required>
-        <br>
-        <label for="description">Nueva Descripción:</label>
-        <textarea id="description" name="description" required></textarea>
-        <br>
-        <button type="submit">Actualizar Tarea</button>
-    </form>
-    
-    <h2>Eliminar Tarea</h2>
-    <form action="/tasks/delete" method="POST">
-        <label for="taskId">ID de la Tarea:</label>
-        <input type="text" id="taskId" name="taskId" required>
-        <br>
-        <button type="submit">Eliminar Tarea</button>
-    </form>
+    <script src="main.js" type="module"></script>
 </body>
 </html>
